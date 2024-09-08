@@ -17,14 +17,14 @@ import java.time.LocalDateTime;
 public class Review {
 
     @Id
-    private Integer review_id;
+    private Integer reviewId;
 
     @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "userId")
+    private Users user;
 
     @OneToOne
-    @JoinColumn(name = "business_id")
+    @JoinColumn(name = "businessId")
     private Business business;
 
     @Column(nullable = false) //between 1 and 5

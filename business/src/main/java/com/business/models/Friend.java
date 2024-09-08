@@ -17,12 +17,12 @@ public class Friend {
 
     @Id
     @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "userId")
+    private Users mainUser;
 
     @Id
     @OneToOne
-    @JoinColumn(name = "friend_id")
-    private User friend;
+    @JoinColumn(name = "friendId")
+    private Users userFriends;
 
 }

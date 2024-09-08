@@ -1,25 +1,26 @@
 package com.business.repos;
 
-import com.business.models.User;
+import com.business.models.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
-public interface UserRepo extends JpaRepository<User, Integer> {
+public interface UserRepo extends JpaRepository<Users, Integer> {
 
-    List<User> findByUser_id(Integer id);
+    List<Users> findByUserId(Integer id);
 
-    List<User> findAllByNameIgnoreCase(String name);
+    List<Users> findAllByNameIgnoreCase(String name);
 
-    List<User> findAllByNameContainingIgnoreCase(String name);
+    List<Users> findAllByNameContainingIgnoreCase(String name);
 
-    List<User> findAllByReview_countGreaterThanEqual(Integer review_count);
+    List<Users> findAllByReviewCountGreaterThanEqual(Integer review_count);
 
-    List<User> findAllByReview_countLessThanEqual(Integer review_count);
+    List<Users> findAllByReviewCountLessThanEqual(Integer review_count);
 
-    List<User> findAllByAcc_createdAfter(Date created);
+    List<Users> findAllByAccCreatedAfter(LocalDateTime accCreated);
 
-    List<User> findAllByAcc_createdBefore(Date created);
+    List<Users> findAllByAccCreatedBefore(LocalDateTime accCreated);
 
 }

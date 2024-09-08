@@ -14,11 +14,11 @@ public interface BusinessRepo extends JpaRepository<Business, Integer> {
 
     List<Business> findAllByNameContainingIgnoreCase(String n);
 
-    List<Business> findAllByBusiness_id(Integer id);
+    List<Business> findAllByBusinessId(Integer id);
 
     List<Business> findAllByCityIgnoreCase(String city);
 
-    List<Business> findAllByPostal_codeIgnoreCase(String postal);
+    List<Business> findAllByPostalCodeIgnoreCase(String postal);
 
     List<Business> findAllByAddressIgnoreCase(String address);
 
@@ -26,9 +26,9 @@ public interface BusinessRepo extends JpaRepository<Business, Integer> {
 
     List<Business> findAllByStarsLessThanEqual(double stars);
 
-    List<Business> findAllByReview_countGreaterThanEqual(Integer reviewCount);
+    List<Business> findAllByReviewCountGreaterThanEqual(Integer reviewCount);
 
-    List<Business> findAllByReview_countLessThanEqual(Integer reviewCount);
+    List<Business> findAllByReviewCountLessThanEqual(Integer reviewCount);
 
 
 }

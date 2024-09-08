@@ -15,17 +15,16 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class User {
+public class Users {
 
     @Id
-    private Integer user_id;
+    private Integer userId;
 
     @Column(nullable = false)
     private String name;
 
+    private Integer reviewCount;
 
-    private Integer review_count = 0;
-
-    private LocalDateTime acc_created = LocalDateTime.now();
+    private LocalDateTime accCreated = LocalDateTime.now();
 
 }

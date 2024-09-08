@@ -20,7 +20,7 @@ public class Business {
 
     @Id
     @GeneratedValue
-    private Integer business_id;
+    private Integer businessId;
 
     @Column(nullable = false)
     private String name;
@@ -30,10 +30,10 @@ public class Business {
     @Column(nullable = false)
     private String city;
 
-    private String postal_code;
+    private String postalCode;
 
-    @Column(nullable = false,precision = 2,scale = 1)
+    @Column(nullable = false)
     private double stars;
 
-    private int review_count;
+    private Integer reviewCount;
 }
