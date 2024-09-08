@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.List;
 
 public interface ReviewRepo extends JpaRepository<Review, Integer> {
-    List<Review> findByReviewId(int id);
 
     List<Review> findAllByUser(Users user);
 

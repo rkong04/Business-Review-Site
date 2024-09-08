@@ -9,8 +9,6 @@ import java.util.List;
 
 public interface UserRepo extends JpaRepository<Users, Integer> {
 
-    List<Users> findByUserId(Integer id);
-
     List<Users> findAllByNameIgnoreCase(String name);
 
     List<Users> findAllByNameContainingIgnoreCase(String name);

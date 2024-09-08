@@ -14,8 +14,6 @@ public interface BusinessRepo extends JpaRepository<Business, Integer> {
 
     List<Business> findAllByNameContainingIgnoreCase(String n);
 
-    List<Business> findAllByBusinessId(Integer id);
-
     List<Business> findAllByCityIgnoreCase(String city);
 
     List<Business> findAllByPostalCodeIgnoreCase(String postal);
