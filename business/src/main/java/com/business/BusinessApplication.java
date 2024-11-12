@@ -1,7 +1,11 @@
 package com.business;
 
 import com.business.models.Business;
+import com.business.models.Review;
+import com.business.models.Users;
 import com.business.repos.BusinessRepo;
+import com.business.repos.ReviewRepo;
+import com.business.repos.UserRepo;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,9 +21,7 @@ public class BusinessApplication {
 
 
 	@Bean
-	public CommandLineRunner commandLineRunner(
-		BusinessRepo repo
-	){
+	public CommandLineRunner commandLineRunner(BusinessRepo repo){
 		return args -> {
 			var business = Business.builder()
 					.name("Walmart")
@@ -30,4 +32,5 @@ public class BusinessApplication {
 		};
 
 	}
+
 }
